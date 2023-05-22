@@ -169,10 +169,10 @@ function! GenerateCommitMessage()
 endfunction
 "
 " Commands to interact with ChatGPT
-command! -range -nargs=? Ask call SendHighlightedCodeToChatGPT('Ask', <line1>, <line2>, <q-args>)
-command! -range -nargs=? Explain call SendHighlightedCodeToChatGPT('explain', <line1>, <line2>, <q-args>)
-command! -range Review call SendHighlightedCodeToChatGPT('review', <line1>, <line2>, '')
-command! -range -nargs=? Rewrite call SendHighlightedCodeToChatGPT('rewrite', <line1>, <line2>, <q-args>)
-command! -range -nargs=? Test call SendHighlightedCodeToChatGPT('test', <line1>, <line2>, <q-args>)
-command! -range -nargs=? Fix call SendHighlightedCodeToChatGPT('fix', <line1>, <line2>, <q-args>)
-command! GenerateCommit call GenerateCommitMessage()
+command! -range -nargs=? ChatGPTAsk call SendHighlightedCodeToChatGPT('Ask', <line1>, <line2>, <q-args>)
+command! -range -nargs=? ChatGPTExplain call SendHighlightedCodeToChatGPT('explain', <line1>, <line2>, <q-args>)
+command! -range ChatGPTReview call SendHighlightedCodeToChatGPT('review', <line1>, <line2>, '')
+command! -range -nargs=? ChatGPTRewrite call SendHighlightedCodeToChatGPT('rewrite', <line1>, <line2>, <q-args>)
+command! -range -nargs=? ChatGPTTest call SendHighlightedCodeToChatGPT('test', <line1>, <line2>, <q-args>)
+command! -range -nargs=? ChatGPTFix call SendHighlightedCodeToChatGPT('fix', <line1>, <line2>, <q-args>)
+command! ChatGPTGenerateCommit call GenerateCommitMessage()
